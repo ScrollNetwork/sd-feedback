@@ -7,7 +7,7 @@ import {Overlay} from '@angular/cdk/overlay';
 @Directive({selector: '[feedback]'})
 export class FeedbackDirective implements OnInit {
   private overlay: Overlay;
-  @Input() title: string = 'Send feedback';
+  @Input() title: string = 'Send Feedback';
   @Input() placeholder: string = 'Describe your issue or share your ideas';
   @Input() editTip = 'Click to highlight or hide info';
   @Input() screenshotCheckboxLabel = 'Include screenshot';
