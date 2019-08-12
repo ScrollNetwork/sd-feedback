@@ -20,7 +20,7 @@ export class FeedbackDialogComponent implements AfterViewInit {
   public vars: object = {};
   public feedback = new Feedback();
   public includeScreenshot: boolean = true;
-  public includeHardware: boolean = true;
+  public sendSystemInfo: boolean = true;
   public showSpinner = true;
   public screenshotEle: HTMLElement;
   public drawCanvas: HTMLCanvasElement;
@@ -45,7 +45,7 @@ export class FeedbackDialogComponent implements AfterViewInit {
               private el: ElementRef) {
     this.feedback = new Feedback();
     this.feedback.description = '';
-    this.feedback.os = true;
+    this.feedback.sendSystemInfo = true;
     this.vars = this.feedbackService.initialVariables;
   }
 
@@ -123,12 +123,8 @@ export class FeedbackDialogComponent implements AfterViewInit {
     }
   }
 
-  public isIncludeHardware() {
-    if (this.includeHardware) {
-      this.feedback.os = true;
-    } else {
-      this.feedback.os = false;
-    }
+  public isSendSystemInfo() {
+    this.feedback.sendSystemInfo = this.sendSystemInfo;
   }
 
   private appendScreenshot() {
