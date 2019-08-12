@@ -11,7 +11,7 @@ export class FeedbackDirective implements OnInit {
   @Input() placeholder: string = 'Describe your issue or share your ideas';
   @Input() editTip = 'Click to highlight or hide info';
   @Input() screenshotCheckboxLabel = 'Include screenshot';
-  @Input() hardwareCheckboxLabel = 'Send Hardware Information';
+  @Input() systemInfoCheckboxLabel = 'Send system information';
   @Input() cancelLabel = 'CANCEL';
   @Input() sendLabel = 'SEND';
   @Input() moveToolbarTip = 'move toolbar';
@@ -53,7 +53,7 @@ export class FeedbackDirective implements OnInit {
       placeholder: this.placeholder,
       editTip: this.editTip,
       screenshotCheckboxLabel: this.screenshotCheckboxLabel,
-      hardwareCheckboxLabel: this.hardwareCheckboxLabel,
+      systemInfoCheckboxLabel: this.systemInfoCheckboxLabel,
       cancelLabel: this.cancelLabel,
       sendLabel: this.sendLabel,
       moveToolbarTip: this.moveToolbarTip,

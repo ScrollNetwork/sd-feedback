@@ -16,7 +16,7 @@
   </div>
   <div class="screenshot-checkbox">
     <mat-checkbox [(ngModel)]="includeScreenshot" (change)="isIncludeScreenshot()">{{vars['screenshotCheckboxLabel']}}</mat-checkbox>
-    <mat-checkbox [(ngModel)]="isSendSystemInfo" (change)="isIncludeHardware()">{{vars['hardwareCheckboxLabel']}}</mat-checkbox>
+    <mat-checkbox [(ngModel)]="sendSystemInfo" (change)="isSendSystemInfo()">{{vars['systemInfoCheckboxLabel']}}</mat-checkbox>
   </div>
 
   <div #screenshotParent class="screenshot-content" (click)="expandDrawingBoard()" *ngIf="includeScreenshot">
